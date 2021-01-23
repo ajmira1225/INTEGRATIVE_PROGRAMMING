@@ -1,0 +1,111 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a simple API of our previous assignment",
+    "version" : "1.0.0",
+    "title" : "Assignment Three",
+    "contact" : {
+      "email" : "you@your-company.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags" : [ {
+    "name" : "admins",
+    "description" : "Secured Admin-only calls"
+  }, {
+    "name" : "developers",
+    "description" : "Operations available to regular developers"
+  } ],
+  "paths" : {
+    "/status" : {
+      "post" : {
+        "tags" : [ "users" ],
+        "summary" : "the user posted a status",
+        "operationId" : "postStatus",
+        "description" : "this will show that the user posted a status",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "postStatus",
+          "description" : "this will show that the user posted a status",
+          "type" : "string",
+          "format" : "string",
+          "minimum" : 0,
+          "maximum" : 50
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "SUCCESS",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/SocialMediaItem"
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        }
+      }
+    },
+    "/friend" : {
+      "post" : {
+        "tags" : [ "users" ],
+        "summary" : "the user added a friend",
+        "operationId" : "addFriend",
+        "description" : "this will show that the user added a friend",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "addFriend",
+          "description" : "this will show that the user added a friend",
+          "type" : "string",
+          "format" : "string",
+          "minimum" : 0,
+          "maximum" : 50
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "SUCCESS",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/SocialMediaItem"
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "SocialMediaItem" : {
+      "type" : "object",
+      "required" : [ "name", "username", "email" ],
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "example" : "Mira-ato, Abdul Jabbar"
+        },
+        "username" : {
+          "type" : "string",
+          "example" : "ajmira"
+        },
+        "email" : {
+          "type" : "string",
+          "example" : "ajmiraato95@gmail.com"
+        }
+      }
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/ajmira1225/social-media-api/1.0.0",
+  "schemes" : [ "https" ]
+}

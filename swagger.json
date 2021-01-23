@@ -104,7 +104,7 @@
         }
       }
     },
-    "successResponse" : {
+    "success" : {
       "type" : "object",
       "properties" : {
         "id" : {

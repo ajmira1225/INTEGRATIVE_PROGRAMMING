@@ -38,7 +38,7 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "SUCCESS",
+            "description" : "ㅤ",
             "schema" : {
               "type" : "array",
               "items" : {
@@ -70,7 +70,7 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "SUCCESS",
+            "description" : "Should be success.",
             "schema" : {
               "type" : "array",
               "items" : {
@@ -79,7 +79,7 @@
             }
           },
           "400" : {
-            "description" : "bad input parameter"
+            "description" : "Bad input parameter."
           }
         }
       }
@@ -90,6 +90,10 @@
       "type" : "object",
       "required" : [ "name", "username", "email" ],
       "properties" : {
+        "message" : {
+          "type" : "string",
+          "example" : "Success"
+        },
         "name" : {
           "type" : "string",
           "example" : "Mira-ato, Abdul Jabbar"
@@ -101,15 +105,6 @@
         "email" : {
           "type" : "string",
           "example" : "ajmiraato95@gmail.com"
-        }
-      }
-    },
-    "success" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     }

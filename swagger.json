@@ -103,6 +103,15 @@
           "example" : "ajmiraato95@gmail.com"
         }
       }
+    },
+    "successResponse" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
     }
   },
   "host" : "virtserver.swaggerhub.com",
